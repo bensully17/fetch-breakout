@@ -12,25 +12,45 @@ body {
 
 header {
     width: 100%;
-    height: 26vh;
+    height: 26%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(209, 209, 209);
+}
+
+#headerName {
+    font-size: 3em;
+}
+
+#data {
+    display: flex;
+    /* padding-top: 4em; */
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+   
+}
+main {
+    height: 74%;
+}
+#data > div {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    color: rgb(209, 209, 209);
-}
-main {
-    display: flex;
-    padding-top: 4em;
-    flex-direction: column;
-    align-items: center;
-    
-    font-size: 1.5em;
-    
-}
-
-main > div {
     padding: .5em;
+    border: 1px gray solid;
+    margin: 1em;
+    height: 5em;
+    width: 10em;
+    box-shadow: 2px 2px 1px rgb(139, 139, 139);
+    font-size: 1.5em;
+    font-family: 'Quicksand', sans-serif;
+
 }
 
 .heroImage {
@@ -39,4 +59,28 @@ main > div {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+}
+
+#value {
+    padding-top: .5em;
+    font-size: 2em;
+}
+#options {
+    height: 10%;
+}
+#data {
+    height: 40%;
+}
+#charts {
+    height: 50%;
+}
+#charts > div{
+    display: flex;
+    justify-content: center;
+    /* padding-top: 3em; */
+    height: 100%;
+}
+#ovImg {
+    height: 100%;
+    width: auto;
 }
