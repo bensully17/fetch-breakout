@@ -1,0 +1,42 @@
+html {
+    height: 100%;
+}
+body {
+    font-family: sans-serif;
+    width: 100vw;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+   
+}
+
+header {
+    width: 100%;
+    height: 26vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: rgb(209, 209, 209);
+}
+main {
+    display: flex;
+    padding-top: 4em;
+    flex-direction: column;
+    align-items: center;
+    
+    font-size: 1.5em;
+    
+}
+
+main > div {
+    padding: .5em;
+}
+
+.heroImage {
+    background-image: url("https://static.pexels.com/photos/360912/pexels-photo-360912.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
