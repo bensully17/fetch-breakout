@@ -1,105 +1,239 @@
-html {
-    height: 100%;
-}
-body {
-    font-family: sans-serif;
-    width: 100vw;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-   
+@media screen and (orientation: landscape) {
+  
+    html {
+        /* height: 100vh; */
+    }
+    body {
+        font-family: sans-serif;
+        /* width: 100vw; */
+        /* height: 100vh; */
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        width: 100%;
+        height: 23%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: rgb(209, 209, 209);
+    }
+
+    #newh2 {
+        font-size: 1.5vw;
+    }
+
+    footer {
+        height: 2.5vh;
+        display: flex;
+        justify-content: flex-end;
+        color: rgb(209, 209, 209);
+        background-color: #333;
+        align-items: center;
+        padding-right: 1em;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+
+    #headerName {
+        font-size: 3vw;
+    }
+
+    #data {
+        display: flex;
+        /* padding-top: 4em; */
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding-left: 10%;
+        padding-right: 10%;
+    
+    }
+    main {
+        height: 74%;
+    }
+    #data > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: .5em;
+        border: 1px gray solid;
+        margin: 1em;
+        height: 70%;
+        width: 20%;
+        box-shadow: 1px 1px 1px rgb(139, 139, 139);
+        font-size: 1.25vw;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+    .heroImage {
+        background-image: url("https://static.pexels.com/photos/360912/pexels-photo-360912.jpeg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    .value {
+        padding-top: .2em;
+        font-size: 3vw;
+    }
+    #options {
+        height: 4%;
+        display: flex;
+        justify-content: center;
+        padding-top: 1%;
+    }
+    #data {
+        height: 40%;
+    }
+    #charts {
+        height: 50%;
+    }
+    #charts > div{
+        display: flex;
+        justify-content: center;
+    }
+    #ovImg {
+        height: 475px;
+        width: auto;
+    }
+
+    #ovation {
+        height: 87%
+    }
+
+    #buttons {
+        height: 8%;
+    }
+
+    #buttons > button { 
+        margin: 3px;
+    }
 }
 
-header {
-    width: 100%;
-    height: 23%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: rgb(209, 209, 209);
-}
-footer {
-    height: 3%;
-    display: flex;
-    justify-content: flex-end;
-    color: rgb(209, 209, 209);
-    background-color: #333;
-    align-items: center;
-    padding-right: 1em;
-}
+@media screen and (orientation: portrait) {
+    html {
+        height: 100%;
+    }
+    body {
+        font-family: sans-serif;
+        width: 100vw;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    header {
+        width: 100%;
+        height: 15%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: rgb(209, 209, 209);
+    }
+    
+    #newh2 {
+        font-size: 2.5vw;
+    }
 
-#headerName {
-    font-size: 3em;
-}
+    footer {
+        height: 3%;
+        display: flex;
+        justify-content: flex-end;
+        color: rgb(209, 209, 209);
+        background-color: #333;
+        align-items: center;
+        padding-right: 1em;
+    }
+    
+    #headerName {
+        font-size: 4vw;
+    }
+    
+    #data {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding-left: 1%;
+        padding-right: 1%;  
+    }
 
-#data {
-    display: flex;
-    /* padding-top: 4em; */
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding-left: 10%;
-    padding-right: 10%;
-   
-}
-main {
-    height: 74%;
-}
-#data > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: .5em;
-    border: 1px gray solid;
-    margin: 1em;
-    height: 6em;
-    width: 14em;
-    box-shadow: 2px 2px 1px rgb(139, 139, 139);
-    font-size: 1.5em;
-    font-family: 'Quicksand', sans-serif;
+    main {
+        height: 82%;
+    }
 
-}
+    #data > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: .5%;
+        border: 1px gray solid;
+        margin: .5%;
+        height: 25%;
+        width: 25%;
+        box-shadow: 1px 1px 1px rgb(139, 139, 139);
+        font-size: 1.75vw;
+        font-family: 'Quicksand', sans-serif;
+    
+    }
+    
+    .heroImage {
+        background-image: url("https://static.pexels.com/photos/360912/pexels-photo-360912.jpeg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    
+    .value {
+        padding-top: .2em;
+        font-size: 4vw;
+    }
 
-.heroImage {
-    background-image: url("https://static.pexels.com/photos/360912/pexels-photo-360912.jpeg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
+    #options {
+        height: 3%;
+        display: flex;
+        justify-content: center;
+        padding-top: 1%;
+    }
 
-.value {
-    padding-top: .2em;
-    font-size: 1.75em;
-}
-#options {
-    height: 10%;
-}
-#data {
-    height: 40%;
-}
-#charts {
-    height: 50%;
-}
-#charts > div{
-    display: flex;
-    justify-content: center;
-}
-#ovImg {
-    height: 100%;
-    width: auto;
-}
+    #data {
+        height: 37%;
+    }
 
-#ovation {
-    height: 87%
-}
+    #charts {
+        height: 60%;
+    }
 
-#buttons {
-    height: 8%;
-}
+    #charts > div{
+        display: flex;
+        justify-content: center;
+    }
 
-#buttons > button { 
-    margin: 3px;
-}
+    #ovImg {
+        height: 100%;
+        width: auto;
+    }
+    
+    #ovation {
+        height: 87%
+    }
+    
+    #buttons {
+        height: 8%;
+    }
+    
+    #buttons > button { 
+        margin: 3px;
+    }
+    
+  }

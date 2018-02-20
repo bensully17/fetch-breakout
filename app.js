@@ -32,7 +32,11 @@ newSections[1].setAttribute('id', 'data')
 newSections[2].setAttribute('id', 'charts')
 
 let mainOptions = document.querySelector('#options')
-// for ()
+for (i= 0; i < 3; i++) {
+  let newOptionButton = document.createElement('button')
+  mainOptions.appendChild(newOptionButton)  
+}
+
 
 for (let i = 0; i < 4; i++) {
   let mainData = document.querySelector('#data')
@@ -44,16 +48,17 @@ for (let i = 0; i < 4; i++) {
     newDivs[i].appendChild(newInnerDiv)
   }
 }
+
 let charts = document.querySelector('#charts')
 for (i = 0; i < 2; i++) {
   let newChartDiv = document.createElement('div')
   charts.appendChild(newChartDiv)
 }
+
 let ovation = document.querySelectorAll('#charts > div')[0]
 let ovationImage = document.createElement('img')
 ovation.appendChild(ovationImage)
 ovation.setAttribute('id', 'ovation')
-
 
 for (i = 0; i < 2; i++){
   let buttonsDiv = document.querySelectorAll('#charts > div')[1]
@@ -92,6 +97,7 @@ bzText[2].setAttribute('class', 'units')
 let intensityText = document.querySelectorAll('#intensity > div')
 intensityText[0].setAttribute('class', 'key')
 intensityText[1].setAttribute('class', 'value')
+intensityText[2].setAttribute('class', 'units')
 
 let speedKey = document.querySelector('#speed > .key')
 let densityKey = document.querySelector('#density > .key')
@@ -106,11 +112,14 @@ intensityKey.textContent = 'Calculated Intensity:'
 let speedUnits = document.querySelector('#speed > .units')
 let densityUnits = document.querySelector('#density > .units')
 let bzUnits = document.querySelector('#bz > .units')
+let intensityUnits = document.querySelector('#intensity > .units')
 
 
 speedUnits.textContent = 'km/s'
 densityUnits.textContent = 'p/cm'+'\u00B3' 
 bzUnits.textContent = 'nT'
+intensityUnits.textContent = '1';
+intensityUnits.style.color = 'white'
 
 
 
@@ -128,8 +137,11 @@ fetch(baseUrl + '/products/solar-wind/plasma-1-day.json')
     console.log(result)
     spd = ((Math.pow(parseFloat(speed), 2)/100) + (Math.pow(parseFloat(density), 2)*100))
     console.log(spd)
+    let optionButton = document.querySelectorAll('#options > button')
+    optionButton[0].textContent = parseInt(1500000/speed/60) + ' minutes from now'
    }) 
 })
+
 fetch(baseUrl + '/products/solar-wind/mag-1-day.json ')
   .then(function(response) {
     return response.json()
@@ -156,7 +168,8 @@ var header = document.querySelector('header')
 var newh2 = document.createElement('h2')
 var spd = 0
 var bz = 0
-header.appendChild(newh2);
+header.appendChild(newh2)
+newh2.setAttribute('id', 'newh2')
 
 var intensity = document.createElement('div')
 const speedValue = document.querySelector('#speed > .value')
